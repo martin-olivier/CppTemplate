@@ -7,7 +7,7 @@ defaults:
         shell: bash
 
 jobs:
-    run_unit_tests:
+    build_and_test:
         strategy:
             fail-fast: false
             matrix:
@@ -23,7 +23,7 @@ jobs:
                     bin: unit_tests
                     dir: .
 
-        name: CI
+        name: Build/UT
         runs-on: ${{ matrix.os }}
 
         steps:
