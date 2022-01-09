@@ -19,7 +19,7 @@ endif()
 
 if (UNIX)
     add_compile_options(-Wall -Wextra -Weffc++)
-else()
+elseif(WIN32)
     add_compile_options(/W4)
 endif()
 
