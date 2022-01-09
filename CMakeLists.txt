@@ -17,7 +17,7 @@ else()
     set(BIN binary)
 endif()
 
-if (UNIX)
+if(UNIX)
     add_compile_options(-Wall -Wextra -Weffc++)
 elseif(WIN32)
     add_compile_options(/W4)
