@@ -17,7 +17,7 @@ A simple description
 ### :rocket: Clone repository
 
 ```shell
-git clone #repository_url
+git clone https://github.com/tocola/CppTemplate
 ```
 
 ### :warning: Requirement

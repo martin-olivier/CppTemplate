@@ -8,7 +8,8 @@ tests:
 
 clean:
 	@rm -rf build
-	@rm -rf QTranslator
-	@rm -rf QTranslatorTests
+	@rm -rf build_tests
+	@rm -rf binary
+	@rm -rf unit_tests
 
 .PHONY: all tests clean
