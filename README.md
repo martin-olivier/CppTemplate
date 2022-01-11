@@ -23,7 +23,7 @@ git clone https://github.com/tocola/CppTemplate
 ### :warning: Requirement
 
 - [CMake >= 3.17](https://cmake.org/download/)
-- [C++20](https://en.cppreference.com/w/cpp/20)
+- [C++17](https://en.cppreference.com/w/cpp/20)
 
 ## :checkered_flag: Quick-Start
 
