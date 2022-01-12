@@ -23,7 +23,7 @@ jobs:
                     bin: unit_tests
                     dir: ./
 
-        name: Build - UT
+        name: ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
 
         steps:
