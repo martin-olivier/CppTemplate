@@ -1,4 +1,4 @@
-# Template
+# CppTemplate
 
 ## :speech_balloon: Desciption
 
@@ -6,24 +6,24 @@ A simple description
 
 ## :book: Summary
   - [:book: Summary](#book-summary)
-  - [Install](#install)
+  - [:computer: Usage](#computer-usage)
     - [:rocket: Clone repository](#rocket-clone-repository)
     - [:warning: Requirement](#warning-requirement)
   - [:checkered_flag: Quick-Start](#checkered_flag-quick-start)
-  - [Authors](#authors)
+  - [:bust_in_silhouette: Authors](#bust_in_silhouette-authors)
 
-## Install
+## :computer: Usage
 
 ### :rocket: Clone repository
 
-```shell
+```sh
 git clone https://github.com/tocola/CppTemplate
 ```
 
 ### :warning: Requirement
 
 - [CMake >= 3.17](https://cmake.org/download/)
-- [C++17](https://en.cppreference.com/w/cpp/20)
+- [C++17](https://en.cppreference.com/w/cpp/17)
 
 ## :checkered_flag: Quick-Start
 
@@ -37,8 +37,7 @@ make tests
 ./unit_tests
 ```
 
-## Authors
+## :bust_in_silhouette: Authors
 
-| [<img src="https://github.com/tocola.png?size=85" width=85><br><sub>Martin OLIVIER</sub>](https://github.com/tocola) 
-| :---: | 
-<h2 align=center>
+ - [Martin Olivier](https://github.com/tocola)
+ - [Coline Seguret](https://github.com/Cleopha)
