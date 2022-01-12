@@ -16,7 +16,7 @@
 cmake-build-*/
 *build/
 *build_tests/
-binary
+tocoflex
 unit_tests
 
 # Documentation Generation Files
