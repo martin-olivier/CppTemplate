@@ -1,11 +1,11 @@
 # Template
 
-## Desciption
+## :speech_balloon: Desciption
 
 A simple description
 
-## Summary
-  - [Summary](#summary)
+## :book: Summary
+  - [:book: Summary](#book-summary)
   - [Install](#install)
     - [:rocket: Clone repository](#rocket-clone-repository)
     - [:warning: Requirement](#warning-requirement)
