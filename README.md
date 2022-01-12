@@ -9,7 +9,7 @@ A simple description
   - [:warning: Requirement](#warning-requirement)
   - [:computer: Usage](#computer-usage)
     - [:rocket: Clone repository](#rocket-clone-repository)
-    - [:wrench: Setup repository](#wrench-clone-repository)
+    - [:wrench: Setup repository](#wrench-setup-repository)
   - [:checkered_flag: Build](#hammer-build)
   - [:bust_in_silhouette: Authors](#bust_in_silhouette-authors)
 
@@ -49,11 +49,13 @@ make tests
 With CMake:
 ```sh
 # to build the program
-make
+cmake . -B build/ -DCMAKE_BUILD_TYPE=Debug
+cmake --build build/
 ./binary
 
 # to build the tests
-make tests
+cmake . -B build_tests/ -DCMAKE_BUILD_TYPE=Debug -DUNIT_TESTS=ON
+cmake --build build_tests/
 ./unit_tests
 ```
 
