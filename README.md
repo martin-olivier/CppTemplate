@@ -6,7 +6,7 @@
   - [:computer: Usage](#computer-usage)
     - [:rocket: Clone repository](#rocket-clone-repository)
     - [:wrench: Setup repository](#wrench-setup-repository)
-  - [:checkered_flag: Build](#hammer-build)
+  - [:hammer: Build](#hammer-build)
   - [:bust_in_silhouette: Authors](#bust_in_silhouette-authors)
 
 ## :warning: Requirement
