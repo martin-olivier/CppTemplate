@@ -19,6 +19,12 @@ def replace_content(file_path : str, search : str, replace : str):
     with open(file_path, 'w') as file:
         file.write(filedata)
 
+def process(cmd : list[str]) -> str:
+    result = subprocess.run(cmd, stdout=subprocess.PIPE)
+    if result.returncode != 0:
+        raise Exception()
+    return result.stdout.decode()
+
 def main() -> int:
     try:
         name = input("Enter the name of your binary:\n")
@@ -33,9 +39,15 @@ def main() -> int:
         replace_content("CMakeLists.txt", "binary", name)
         replace_content("CMakeLists.txt", "Template", name_upper)
 
-        result = subprocess.run(["git", "config", "--get", "remote.origin.url"], stdout=subprocess.PIPE)
-        if result.returncode == 0:
-            replace_content("README.md", "https://github.com/tocola/CppTemplate", result.stdout.decode())
+        try:
+            url = process(["git", "config", "remote.origin.url"]).replace('\n', '')
+            user = process(["git", "config", "user.name"]).replace('\n', '')
+            user_url = url[0:url.rfind('/')]
+            replace_content("README.md", "https://github.com/tocola/CppTemplate", url)
+            replace_content("README.md", " - [Martin Olivier](https://github.com/tocola)\n - [Coline Seguret](https://github.com/Cleopha)", " - [" + user + "](" + user_url + ")")
+        except:
+            print(Color.RED + "git error: Could not change repo link and autors on README.md" + Color.END)
+
         print(Color.GREEN + "Setup Done" + Color.END)
         os.remove("setup.py")
         exit(0)
