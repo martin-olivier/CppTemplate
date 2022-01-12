@@ -25,6 +25,7 @@ def main() -> int:
             raise Exception("the name of your binary cannot be empty")
         name_upper = name.capitalize()
         replace_content("README.md", "binary", name)
+        replace_content("README.md", "\n- [Python3](https://www.python.org/download/releases/3.0/)", "")
         replace_content(".gitignore", "binary", name)
         replace_content("Makefile", "binary", name)
         replace_content("CMakeLists.txt", "binary", name)
