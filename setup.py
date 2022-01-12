@@ -29,6 +29,7 @@ def main() -> int:
         replace_content("Makefile", "binary", name)
         replace_content("CMakeLists.txt", "binary", name)
         replace_content("CMakeLists.txt", "Template", name_upper)
+        print(Color.GREEN + "Setup Done" + Color.END)
         os.remove("setup.py")
         exit(0)
     except EOFError:
