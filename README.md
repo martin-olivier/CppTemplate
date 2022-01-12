@@ -20,7 +20,7 @@
 ### :rocket: Clone repository
 
 ```sh
-git clone https://github.com/tocola/CppTemplate
+git clone https://github.com/martin-olivier/CppTemplate
 ```
 
 ### :wrench: Setup repository
@@ -57,5 +57,5 @@ cmake --build build_tests/
 
 ## :bust_in_silhouette: Authors
 
- - [Martin Olivier](https://github.com/tocola)
+ - [Martin Olivier](https://github.com/martin-olivier)
  - [Coline Seguret](https://github.com/Cleopha)

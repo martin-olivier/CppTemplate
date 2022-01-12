@@ -43,8 +43,8 @@ def main() -> int:
             url = process(["git", "config", "remote.origin.url"]).replace('\n', '')
             user = process(["git", "config", "user.name"]).replace('\n', '')
             user_url = url[0:url.rfind('/')]
-            replace_content("README.md", "https://github.com/tocola/CppTemplate", url)
-            replace_content("README.md", " - [Martin Olivier](https://github.com/tocola)\n - [Coline Seguret](https://github.com/Cleopha)", " - [" + user + "](" + user_url + ")")
+            replace_content("README.md", "https://github.com/martin-olivier/CppTemplate", url)
+            replace_content("README.md", " - [Martin Olivier](https://github.com/martin-olivier)\n - [Coline Seguret](https://github.com/Cleopha)", " - [" + user + "](" + user_url + ")")
         except:
             print(Color.RED + "git error: Could not change repo link and autors on README.md" + Color.END)
 
