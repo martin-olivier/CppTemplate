@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import subprocess
 
 class Color:
     BLUE = '\033[94m'
@@ -25,11 +26,16 @@ def main() -> int:
             raise Exception("the name of your binary cannot be empty")
         name_upper = name.capitalize()
         replace_content("README.md", "binary", name)
+        replace_content("README.md", "# CppTemplate", "# " + name_upper)
         replace_content("README.md", "\n- [Python3](https://www.python.org/download/releases/3.0/)", "")
         replace_content(".gitignore", "binary", name)
         replace_content("Makefile", "binary", name)
         replace_content("CMakeLists.txt", "binary", name)
         replace_content("CMakeLists.txt", "Template", name_upper)
+
+        result = subprocess.run(["git", "config", "--get", "remote.origin.url"], stdout=subprocess.PIPE)
+        if result.returncode == 0:
+            replace_content("README.md", "https://github.com/tocola/CppTemplate", result.stdout.decode())
         print(Color.GREEN + "Setup Done" + Color.END)
         os.remove("setup.py")
         exit(0)

@@ -1,9 +1,5 @@
 # CppTemplate
 
-## :speech_balloon: Description
-
-A simple description
-
 ## :book: Summary
   - [:book: Summary](#book-summary)
   - [:warning: Requirement](#warning-requirement)
