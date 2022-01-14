@@ -30,16 +30,16 @@ jobs:
             - uses: actions/checkout@v2
 
             - name: Generate Build File
-              run: cmake . -B build/ -DCMAKE_BUILD_TYPE=Debug
+              run: cmake . -B build
 
             - name: Build Project
-              run: cmake --build build/
+              run: cmake --build build
 
             - name: Generate Tests Build File
-              run: cmake . -B build_tests/ -DCMAKE_BUILD_TYPE=Debug -DUNIT_TESTS=ON
+              run: cmake . -B build_tests -DUNIT_TESTS=ON
 
             - name: Build Unit Tests
-              run: cmake --build build_tests/
+              run: cmake --build build_tests
 
             - name: Run Unit Tests
               run: ${{ matrix.dir }}${{ matrix.bin }}

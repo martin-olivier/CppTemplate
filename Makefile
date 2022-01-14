@@ -1,10 +1,10 @@
 all:
-	cmake . -B build/ -DCMAKE_BUILD_TYPE=Debug
-	cmake --build build/
+	cmake . -B build
+	cmake --build build
 
 tests:
-	cmake . -B build_tests/ -DCMAKE_BUILD_TYPE=Debug -DUNIT_TESTS=ON
-	cmake --build build_tests/
+	cmake . -B build_tests -DUNIT_TESTS=ON
+	cmake --build build_tests
 
 clean:
 	@rm -rf build

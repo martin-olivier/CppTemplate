@@ -45,13 +45,13 @@ make tests
 With CMake:
 ```sh
 # to build the program
-cmake . -B build/ -DCMAKE_BUILD_TYPE=Debug
-cmake --build build/
+cmake . -B build
+cmake --build build
 ./binary
 
 # to build the tests
-cmake . -B build_tests/ -DCMAKE_BUILD_TYPE=Debug -DUNIT_TESTS=ON
-cmake --build build_tests/
+cmake . -B build_tests -DUNIT_TESTS=ON
+cmake --build build_tests
 ./unit_tests
 ```
 
