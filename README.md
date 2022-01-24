@@ -1,14 +1,5 @@
 # CppTemplate
 
-## :book: Summary
-  - [:book: Summary](#book-summary)
-  - [:warning: Requirement](#warning-requirement)
-  - [:computer: Usage](#computer-usage)
-    - [:rocket: Clone repository](#rocket-clone-repository)
-    - [:wrench: Setup repository](#wrench-setup-repository)
-  - [:hammer: Build](#hammer-build)
-  - [:bust_in_silhouette: Authors](#bust_in_silhouette-authors)
-
 ## :warning: Requirement
 
 - [CMake >= 3.17](https://cmake.org/download/)
