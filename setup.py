@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import os
-import subprocess
 
 class Color:
     GREEN = '\033[92m'
@@ -14,12 +13,6 @@ def replace_content(file_path: str, search: str, replace: str):
     filedata = filedata.replace(search, replace)
     with open(file_path, 'w') as file:
         file.write(filedata)
-
-def process(cmd: list[str]) -> str:
-    result = subprocess.run(cmd, stdout=subprocess.PIPE)
-    if result.returncode != 0:
-        raise Exception()
-    return result.stdout.decode()
 
 if __name__ == "__main__":
     try:
@@ -34,16 +27,6 @@ if __name__ == "__main__":
         replace_content("Makefile", "binary", name)
         replace_content("CMakeLists.txt", "binary", name)
         replace_content("CMakeLists.txt", "Template", name_upper)
-
-        try:
-            url = process(["git", "config", "remote.origin.url"]).replace('\n', '')
-            user = process(["git", "config", "user.name"]).replace('\n', '')
-            user_url = url[0:url.rfind('/')]
-            replace_content("README.md", "https://github.com/martin-olivier/CppTemplate", url)
-            replace_content("README.md", " - [Martin Olivier](https://github.com/martin-olivier)\n - [Coline Seguret](https://github.com/Cleopha)", " - [" + user + "](" + user_url + ")")
-        except:
-            print(Color.RED + "git error: Could not change repo link and autors on README.md" + Color.END)
-
         print(Color.GREEN + "Setup Done" + Color.END)
         os.remove("setup.py")
         exit(0)

@@ -40,7 +40,7 @@ elseif(WIN32)
     add_compile_options(/W4)
 endif()
 
-# The location of your main
+# The location of the main source file
 set(MAIN src/main.cpp)
 
 # The list of source files
@@ -53,6 +53,7 @@ set(TEST_SOURCES
     tests/test.cpp
 )
 
+# Executable settings
 if(UNIT_TESTS)
     add_executable(${BIN}
         ${SOURCES}
