@@ -58,7 +58,7 @@ jobs:
               run: sudo apt install -y valgrind
 
             - name: Generate Tests Build File
-              run: cmake . -B build_tests -DUNIT_TESTS=ON
+              run: cmake . -B build_tests -DUNIT_TESTS=ON -DCMAKE_BUILD_TYPE=Debug
 
             - name: Build Unit Tests
               run: cmake --build build_tests
