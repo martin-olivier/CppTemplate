@@ -64,4 +64,4 @@ jobs:
               run: cmake --build build_tests
 
             - name: Run Unit Tests with Valgrind
-              run: valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --error-exitcode=1 ./unit_tests
+              run: valgrind --leak-check=full --show-leak-kinds=all --error-exitcode=1 ./unit_tests
