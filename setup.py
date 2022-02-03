@@ -3,9 +3,9 @@
 import os
 
 class Color:
+    RED   = '\033[91m'
     GREEN = '\033[92m'
-    RED = '\033[91m'
-    END = '\033[0m'
+    END   = '\033[0m'
 
 def replace_content(file_path: str, search: str, replace: str):
     with open(file_path, 'r') as file :
