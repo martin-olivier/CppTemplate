@@ -22,7 +22,7 @@ python3 setup.py
 
 ## :hammer: Build
 
-With Makefile:
+With Unix Makefile:
 ```sh
 # to build the program
 make
