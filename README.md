@@ -22,7 +22,7 @@ python3 setup.py
 
 ## :hammer: Build
 
-With Unix Makefile:
+Using Unix Makefile:
 ```sh
 # to build the program
 make
@@ -33,7 +33,7 @@ make tests
 ./unit_tests
 ```
 
-With CMake:
+Using CMake:
 ```sh
 # to build the program
 cmake . -B build
